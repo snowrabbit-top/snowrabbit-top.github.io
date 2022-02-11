@@ -27,37 +27,39 @@
             }
 
             html {
-                background: linear-gradient(var(--coordinate), var(--colorA), var(--colorC), var(--colorF));
-                animation: change 1s infinite linear;
+                width: 100vw;
+                height: 100vh;
+                background-image: linear-gradient(var(--coordinate), var(--colorA) 0%, var(--colorC) 50%, var(--colorF) 100%);
+                animation: change 3s infinite linear;
             }
 
             @keyframes change {
                 0% {
-                    --coordinate: 0deg;
+                    --coordinate: 60deg;
                     --colorA: #272727;
                     --colorC: #930000;
                     --colorF: #FF359A;
                 }
                 20% {
-                    --coordinate: 60deg;
+                    --coordinate: 120deg;
                     --colorA: #FF8EFF;
                     --colorC: #E6CAFF;
                     --colorF: #000093;
                 }
                 40% {
-                    --coordinate: 120deg;
+                    --coordinate: 180deg;
                     --colorA: #0066CC;
                     --colorC: #00FFFF;
                     --colorF: #96FED1;
                 }
                 60% {
-                    --coordinate: 180deg;
+                    --coordinate: 240deg;
                     --colorA: #CEFFCE;
                     --colorC: #548C00;
                     --colorF: #A6A600;
                 }
                 80% {
-                    --coordinate: 240deg;
+                    --coordinate: 280deg;
                     --colorA: #FFD306;
                     --colorC: #FFC78E;
                     --colorF: #FFDAC8;

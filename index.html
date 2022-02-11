@@ -8,29 +8,26 @@
             @property --colorA {
                 syntax: '<color>';
                 inherits: false;
-                initial-value: fuchsia;
             }
             @property --colorC {
                 syntax: '<color>';
                 inherits: false;
-                initial-value: #f79188;
             }
             @property --colorF {
                 syntax: '<color>';
                 inherits: false;
-                initial-value: red;
             }
             @property --coordinate {
-                syntax: '<*>';
+                syntax: '<deg>';
                 inherits: false;
-                initial-value: red;
+                initial-value: 0deg;
             }
 
             html {
                 width: 100vw;
                 height: 100vh;
                 background-image: linear-gradient(var(--coordinate), var(--colorA) 0%, var(--colorC) 50%, var(--colorF) 100%);
-                animation: change 3s infinite linear;
+                animation: change 0.01s infinite linear;
             }
 
             @keyframes change {

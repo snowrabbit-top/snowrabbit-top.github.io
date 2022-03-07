@@ -58,4 +58,4 @@ function queryParams(data = {}, isPrefix = false, arrayFormat = 'brackets') {
     return _result.length ? prefix + _result.join('&') : '';
 }
 
-export default queryParams;
+// export default queryParams;

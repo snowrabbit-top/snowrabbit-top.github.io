@@ -1,5 +1,3 @@
-import createXHR from "../tool/xhr.js";
-
 // 排名
 let trending = document.querySelector("ul[class^=Trending_items]").innerHTML;
 // 代币标题

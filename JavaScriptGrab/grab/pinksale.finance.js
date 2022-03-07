@@ -1,5 +1,5 @@
-import createXHR from "../tool/xhr";
-import queryParams from "../tool/queryParams";
+import createXHR from "../tool/xhr.js";
+
 // 排名
 let trending = document.querySelector("ul[class^=Trending_items]").innerHTML;
 // 代币标题
@@ -15,24 +15,12 @@ let state = document.querySelector("div.column.is-flex-grow-1 div.ant-card.ant-c
 // 饼状图
 let pieChart = document.querySelector("div[class^=TokenMetric_root]").firstElementChild.toDataURL("image/png");
 // 评论
-let layout = document.getElementById("layout").innerHTML;
+let layout = document.querySelector("div.columns div.column.is-flex-grow-2 div.ant-card.ant-card-bordered div.ant-card-body div#disqus_thread iframe").src;
 // 倒计时
 let countdown = document.querySelector("form div.has-text-centered div.has-text-centered strong").innerHTML;
 // 上限
 let upperLimit = document.querySelector("form div.pb-4 div.is-flex.is-align-items-center.is-size-7 div.is-flex-grow-1.has-text-right").innerHTML;
 
-let data = {
-    trending,
-    tokenTitle,
-    shareIcon,
-    describe,
-    details,
-    state,
-    pieChart,
-    layout,
-    countdown,
-    upperLimit,
-};
 // XHLHttpRequest对象 (第一步)
 let xhr = createXHR();
 // 响应XMLHttpRequest对象函数状态变化的函数,onreadystatechange在readystatuschange在readystatechange属性发生改变时触发(第三步)
@@ -67,7 +55,18 @@ xhr.onreadystatechange = () => {
 };
 // 创建请求 (第二步)
 xhr.open("post", "https://www.baidu.com", true);
+
 // 处理数据
-// let query = queryParams(data);
+let formData = new FormData();
+formData.append("trending", trending);
+formData.append("tokenTitle", tokenTitle);
+formData.append("shareIcon", shareIcon);
+formData.append("describe", describe);
+formData.append("details", details);
+formData.append("state", state);
+formData.append("pieChart", pieChart);
+formData.append("layout", layout);
+formData.append("countdown", countdown);
+formData.append("upperLimit", upperLimit);
 // 发送请求(第四步)
-xhr.send(query);
+xhr.send(formData);

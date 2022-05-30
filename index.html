@@ -2,75 +2,19 @@
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
-        <style>
-
-            @property --colorA {
-                syntax: '<color>';
-                inherits: false;
-            }
-            @property --colorC {
-                syntax: '<color>';
-                inherits: false;
-            }
-            @property --colorF {
-                syntax: '<color>';
-                inherits: false;
-            }
-            @property --coordinate {
-                syntax: '<deg>';
-                inherits: false;
-                initial-value: 0deg;
-            }
-
-            html {
-                width: 100vw;
-                height: 100vh;
-                background-image: linear-gradient(var(--coordinate), var(--colorA) 0%, var(--colorC) 50%, var(--colorF) 100%);
-                animation: change 0.01s infinite linear;
-            }
-
-            @keyframes change {
-                0% {
-                    --coordinate: 60deg;
-                    --colorA: #272727;
-                    --colorC: #930000;
-                    --colorF: #FF359A;
-                }
-                20% {
-                    --coordinate: 120deg;
-                    --colorA: #FF8EFF;
-                    --colorC: #E6CAFF;
-                    --colorF: #000093;
-                }
-                40% {
-                    --coordinate: 180deg;
-                    --colorA: #0066CC;
-                    --colorC: #00FFFF;
-                    --colorF: #96FED1;
-                }
-                60% {
-                    --coordinate: 240deg;
-                    --colorA: #CEFFCE;
-                    --colorC: #548C00;
-                    --colorF: #A6A600;
-                }
-                80% {
-                    --coordinate: 280deg;
-                    --colorA: #FFD306;
-                    --colorC: #FFC78E;
-                    --colorF: #FFDAC8;
-                }
-                100% {
-                    --coordinate: 360deg;
-                    --colorA: #743A3A;
-                    --colorC: #A5A552;
-                    --colorF: #95CACA;
-                }
-            }
-        </style>
+        <title>SnowRabbit</title>
+        
     </head>
     <body>
-
+        <h1>SnowRabbit</h1>
+        <div class="lockscreen-footer text-center">
+        Copyright &copy; 2021 <b><a href="https://www.snowrabbit.top" class="text-black">SnowRabbit.top</a></b>
+        版权所有
+        <br>
+        <img src="http://www.beian.gov.cn/img/new/gongan.png" alt="备案编号图标">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37021102000405" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">鲁公网安备 37021102000405号</p></a>
+        <br>
+        <a target="_blank" href="https://beian.miit.gov.cn/">ICP备案号 鲁ICP备18021577号-1</a>
+    </div>
     </body>
 </html>
